@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Color Game</title>
+</head>
+<body>
+    <h1> Color Game</h1>
+    <div class="wrapper">
+        <div class="input">
+            <input id="selection" type="number" placeholder="Enter grid number"></input><br/>
+            <button onClick=changeColor()>Enter</button>
+        </div>
+        <div class='game-board'> 
+            <div class="grid-box" id="box1">1</div>
+            <div class="grid-box" id="box2">2</div>
+            <div class="grid-box" id="box3">3</div>
+            <div class="grid-box" id="box4">4</div>
+            <div class="grid-box" id="box5">5</div>
+            <div class="grid-box" id="box6">6</div>
+            <div class="grid-box" id="box7">7</div>
+            <div class="grid-box" id="box7">8</div>
+            <div class="grid-box" id="box9">9</div>
+        </div>
+ 
+
+    </div>
+    
+    <script>
+        function changeColor(){
+            console.log("box" + document.getElementById("selection").value)
+            let element = document.getElementById("box" + document.getElementById("selection").value);
+            let color = element.style.backgroundColor;
+            console.log(color)
+            if (color === 'green') {
+                element.style.backgroundColor = 'white';
+            } else {
+                element.style.backgroundColor = 'green';
+            }
+        }
+    </script>
+</body>
+</html>
